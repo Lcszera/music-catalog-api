@@ -29,4 +29,13 @@ public class AlbumRepository {
             albums.removeIf(album -> album.getId().equals(id));
         }
 
+        public Album findByName(String name) {
+            for (Album album : albums) {
+                if (album.getTitle().equalsIgnoreCase(name)) {
+                    return album;
+                }
+            }
+            return null;
+        }
+
 }

@@ -40,4 +40,14 @@ public class AlbumService {
         repository.deleteById(id);
     }
 
+    public Album getAlbumByName(String name) {
+        Album album = repository.findByName(name);
+
+        if (album == null) {
+            throw new RuntimeException("Album not found");
+        }
+
+        return album;
+    }
+
 }

@@ -45,5 +45,8 @@ public class Main {
 
                     System.out.println("=== Genres ===");
                         genreService.listAllGenres().forEach(System.out::println);
+
+        System.out.println(albumService.getAlbumByName("Hybrid Theory"));
+
     }
 }
