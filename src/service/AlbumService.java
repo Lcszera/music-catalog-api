@@ -16,7 +16,7 @@ public class AlbumService {
         repository.save(album);
     }
 
-    public List<Album> listAlbums() {
+    public List<Album> listAllAlbums() {
         return repository.findAll();
     }
 

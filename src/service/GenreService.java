@@ -16,7 +16,7 @@ public class GenreService {
         repository.save(genre);
     }
 
-    public List<Genre> listGenre() {
+    public List<Genre> listAllGenres() {
         return repository.findAll();
     }
 

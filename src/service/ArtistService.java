@@ -16,7 +16,7 @@ public class ArtistService {
         repository.save(artist);
     }
 
-    public List<Artist> listArtists() {
+    public List<Artist> listAllArtists() {
         return repository.findAll();
     }
 
