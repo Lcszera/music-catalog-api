@@ -50,4 +50,14 @@ public class AlbumService {
         return album;
     }
 
+    public List<Album> getAlbumsByArtist(Long artistId) {
+        List<Album> albums = repository.findByArtistId(artistId);
+
+        if (albums.isEmpty()) {
+            throw new RuntimeException("No albums found for this artist");
+        }
+
+        return albums;
+    }
+
 }

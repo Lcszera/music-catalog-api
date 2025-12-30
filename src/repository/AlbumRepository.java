@@ -38,4 +38,17 @@ public class AlbumRepository {
             return null;
         }
 
+        public List<Album> findByArtistId (Long artistId) {
+            List<Album> result = new ArrayList<>();
+
+            for (Album album : albums) {
+                if (album.getArtist().getId().equals(artistId)) {
+                    result.add(album);
+                }
+
+            }
+
+            return result;
+        }
+
 }
