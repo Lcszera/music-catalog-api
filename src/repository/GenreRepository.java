@@ -29,4 +29,14 @@ public class GenreRepository {
             genres.removeIf(genre -> genre.getId().equals(id));
         }
 
+        public Genre findByName(String name) {
+            for (Genre genre : genres) {
+                if (genre.getName().equalsIgnoreCase(name)) {
+                    return genre;
+                }
+            }
+
+            return null;
+        }
+
 }

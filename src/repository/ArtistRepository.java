@@ -30,4 +30,14 @@ public class ArtistRepository {
             artists.removeIf(artist -> artist.getId().equals(id));
     }
 
+    public Artist findByName(String name) {
+            for (Artist artist : artists) {
+                if (artist.getName().equalsIgnoreCase(name)) {
+                    return artist;
+                }
+            }
+
+            return null;
+    }
+
 }

@@ -40,4 +40,15 @@ public class ArtistService {
         repository.deleteById(id);
     }
 
+    public Artist getArtistByName (String name) {
+        Artist artist = repository.findByName(name);
+
+        if (artist == null) {
+            throw new RuntimeException("Artist not found");
+
+        }
+
+        return artist;
+    }
+
 }

@@ -45,4 +45,14 @@ public class Album {
         return getClass().hashCode();
     }
 
+    @Override
+    public String toString() {
+        return "Album{" +
+                "id=" + id +
+                ", name='" + title + '\'' +
+                ", artist=" + artist.getName() +
+                '}';
+
+    }
+
 }

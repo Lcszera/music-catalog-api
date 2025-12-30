@@ -40,4 +40,14 @@ public class GenreService {
         repository.deleteById(id);
     }
 
+    public Genre getGenreByName(String name) {
+        Genre genre = repository.findByName(name);
+
+        if (genre == null) {
+            throw new RuntimeException("Genre not found");
+        }
+
+        return genre;
+    }
+
 }

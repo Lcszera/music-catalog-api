@@ -45,4 +45,15 @@ public class Artist {
         return getClass().hashCode();
     }
 
+    @Override
+    public String toString() {
+        return "Artist{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", country='" + country  + '\'' +
+                ", genre=" + genre.getName() +
+                '}';
+
+    }
+
 }

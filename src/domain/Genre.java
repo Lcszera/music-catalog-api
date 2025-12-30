@@ -33,4 +33,13 @@ public class Genre  {
         return getClass().hashCode();
     }
 
+    @Override
+    public String toString() {
+        return "Genre{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+
+    }
+
 }

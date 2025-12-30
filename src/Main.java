@@ -46,7 +46,9 @@ public class Main {
                     System.out.println("=== Genres ===");
                         genreService.listAllGenres().forEach(System.out::println);
 
-        System.out.println(albumService.getAlbumByName("Hybrid Theory"));
+            System.out.println(albumService.getAlbumByName("Hybrid Theory"));
+            System.out.println(artistService.getArtistByName("Linkin Park"));
+            System.out.println(genreService.getGenreByName("Rock"));
 
     }
 }
