@@ -1,3 +1,4 @@
+import application.MusicAppService;
 import domain.Album;
 import domain.Artist;
 import domain.Genre;
@@ -49,6 +50,11 @@ public class Main {
             System.out.println(albumService.getAlbumByName("Hybrid Theory"));
             System.out.println(artistService.getArtistByName("Linkin Park"));
             System.out.println(genreService.getGenreByName("Rock"));
+
+        albumService.getAlbumsByArtist(1L);
+        MusicAppService app = new MusicAppService(albumService, artistService, genreService);
+
+        app.findAlbumsByArtist(1L);
 
     }
 }
