@@ -2,6 +2,8 @@ package service;
 
 import domain.Artist;
 import repository.ArtistRepository;
+import repository.GenreRepository;
+
 import java.util.List;
 
 public class ArtistService {

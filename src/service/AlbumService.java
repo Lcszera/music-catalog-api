@@ -6,6 +6,8 @@ import java.util.List;
 
 public class AlbumService {
 
+    private ArtistService artistService = new ArtistService();
+    private GenreService genreService = new GenreService();
     private AlbumRepository repository = new AlbumRepository();
 
     public void createAlbum(Album album) {
