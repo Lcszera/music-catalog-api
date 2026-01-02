@@ -60,4 +60,24 @@ public class AlbumService {
         return albums;
     }
 
+    public List<Album> getAlbumsByReleaseYear (int year) {
+        List<Album> albums = repository.findByReleaseYear(year);
+
+        if(albums.isEmpty()) {
+            throw new RuntimeException("No albums found for this year");
+        }
+
+        return albums;
+    }
+
+    public List<Album> getAlbumsByGenreAndYear (Long genreId, int year) {
+        List<Album> albums = repository.findByGenreAndYear(genreId, year);
+
+        if(albums.isEmpty()) {
+            throw new RuntimeException("No albums found for this Genre and Year");
+        }
+
+        return albums;
+    }
+
 }
